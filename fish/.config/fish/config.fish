@@ -15,7 +15,8 @@ alias ld='eza -lD'
 alias lf='eza -lF --icons=always --color=always | grep -v /'
 alias lh='eza -dl --icons=always .* --group-directories-first'
 alias ll='eza -al --icons=always --group-directories-first'
-alias ls='eza -alF --icons=always --color=always --sort=name --group-directories-first'
+alias ls='eza -alF --icons=always --color=always --sort=name\
+          --group-directories-first --no-permissions --no-user --git --no-time'
 alias lt='eza -aT --level=2 --icons=always --sort=name'
 # -------------------------------------------------------------------------------------
 # Setup Yazi --------------------------------------------------------------------------
