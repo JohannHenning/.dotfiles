@@ -77,15 +77,15 @@ From this point is basically a fresh Arc install and this is what I usually do:
 3. omf [install](https://github.com/oh-my-fish/oh-my-fish)
   - I usally go for the  `curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish` option
   - Then run the following from within `~/.dotfiles`:
-```
-$ rm -rf ~/.config/omf/
+  ```
+  $ rm -rf ~/.config/omf/
 
-$ stow omf
+  $ stow omf
 
-$ omf install
+  $ omf install
 
-$ omf reload
-```
+  $ omf reload
+  ```
   - PS: The promp should now start to look like home
 
 4. eza [install](https://github.com/eza-community/eza)
@@ -115,9 +115,12 @@ Now at this stage you might be wondering if you've been pulling these .config fi
   - On your first push you'll encounter the stupid GitHub Auth issue, here a
   breakdown of how to deal with [that](https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md):
   ```
-
+  curl -L https://aka.ms/gcm/linux-install-source.sh | sh
+  git-credential-manager configure
   ```
-
+  PS: This does take a while just be patient, especially the dot.net install
+  - If the above method isn't working (dotnet can be a bit silly at times) then try [this](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+    - and use old fathfull `yay -Sy github-cli` and then run `gh auth login`
 
 Cool now that you're starting to get you legs back fzf next (sessionx not working hey :) )
 
