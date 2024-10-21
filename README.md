@@ -129,3 +129,7 @@ Cool now that you're starting to get you legs back fzf next (sessionx not workin
 
 - zoxide [intall](https://github.com/ajeetdsouza/zoxide)
   - Ja, `yay -Sy zoxide`
+
+- ripgrep [rg]:(https://github.com/BurntSushi/ripgrep)
+  - Jip, `yay -Sy ripgrep`
+  - PS now Live Grep will start working in Nvim ("<leader> / ")
