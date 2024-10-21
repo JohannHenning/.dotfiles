@@ -7,3 +7,9 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Open parent directory in floating window
 vim.keymap.set("n", "<space>-", require("oil").toggle_float)
+
+-- Configure LazyGit over GitUI
+vim.keymap.del("n", "<leader>gG")
+vim.keymap.del("n", "<leader>gg")
+vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
+vim.keymap.set("n", "<leader>gG", "<cmd>LazyGitFilterCurrentFile<cr>", { desc = "Open LazyGit Filter" })

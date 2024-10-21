@@ -189,21 +189,21 @@ return {
         "flake8",
       },
     },
-    keys = {
-      {
-        "<leader>gG",
-        function()
-          LazyVim.terminal.open({ "gitui" }, { esc_esc = true, ctrl_hjkl = true })
-        end,
-        desc = "GitUi (cwd)"
-      },
-      {
-        "<leader>gg",
-        function()
-          LazyVim.terminal.open({ "gitui" }, { cwd = LazyVim.root.get(), esc_esc = true, ctrl_hjkl = true })
-        end,
-        desc = "GitUi (Root Dir)",
-      },
-    }
+    -- keys = {
+    --   {
+    --     "<leader>gG",
+    --     function()
+    --       LazyVim.terminal.open({ "gitui" }, { esc_esc = true, ctrl_hjkl = true })
+    --     end,
+    --     desc = "GitUi (cwd)"
+    --   },
+    --   {
+    --     "<leader>gg",
+    --     function()
+    --       LazyVim.terminal.open({ "gitui" }, { cwd = LazyVim.root.get(), esc_esc = true, ctrl_hjkl = true })
+    --     end,
+    --     desc = "GitUi (Root Dir)",
+    --   },
+    --   }
   }
 }
