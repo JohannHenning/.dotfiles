@@ -121,6 +121,25 @@ Now at this stage you might be wondering if you've been pulling these .config fi
   PS: This does take a while just be patient, especially the dot.net install
   - If the above method isn't working (dotnet can be a bit silly at times) then try [this](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
     - and use old fathfull `yay -Sy github-cli` and then run `gh auth login`
+This actually turned into another rabbit hole I'm gonna explain below:
+
+#TODO Figure out how to do those fancy hide section markdowns
+
+[This](https://gitlab.com/hasecilu/dotfiles/-/snippets/2542670) guide shows how to create a GPG key and link it to your GitHub account. Keeps you from having to authorize the machine over and over again
+  - Ensure `gpg` is installed
+  - Run `gpg --full-generate-key`
+  - Run `gpg --list-secret-keys --keyid-format LONG`
+  - Run `gpg --armor --export "YOUR_KEY_HERE" >PGP_PUBLIC_KEY_BLOCK`
+  - [Goto](https://github.com/settings/keys) and setup the SSH key just generated
+  - Go and add the following to the main `.gitconfig` file:
+  ```
+  [user]
+	name = username
+	email = user@domain.com
+	signingkey = "YOUR_KEY_HERE"
+
+  ```
+  - You'll also want to run `gh auth login` one last time so the "GPG" key loads
 
 Cool now that you're starting to get you legs back fzf next (sessionx not working hey :) )
 
