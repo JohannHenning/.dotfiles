@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export GPG_TTY:not\x20a\x20tty
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u00bb
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_plugins:rose\x2dpine/fish

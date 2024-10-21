@@ -1,5 +1,6 @@
 
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
+set -Ux GPG_TTY $(tty)
 # Set up fzf key bindings
 fzf --fish | source
 # Set up zoxide
