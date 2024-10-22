@@ -152,3 +152,8 @@ Cool now that you're starting to get you legs back fzf next (sessionx not workin
 - ripgrep [rg]:(https://github.com/BurntSushi/ripgrep)
   - Jip, `yay -Sy ripgrep`
   - PS now Live Grep will start working in Nvim ("<leader> / ")
+Here is another fun one, at the time of writing this markdown file, I was in the process of creating this whole repo and though it relevant to be able to chill on my couch and code this from my Arch Installed laptop.
+
+So `openssh` next:
+  - `yay -Sy openssh`
+  - `sudo systemctl enable --now sshd`
