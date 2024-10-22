@@ -13,3 +13,7 @@ vim.keymap.del("n", "<leader>gG")
 vim.keymap.del("n", "<leader>gg")
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
 vim.keymap.set("n", "<leader>gG", "<cmd>LazyGitFilterCurrentFile<cr>", { desc = "Open LazyGit Filter" })
+
+-- Config quarto
+local quarto = require("quarto")
+vim.keymap.set("n", "<leader>qp", quarto.quartoPreview, { silent = true, noremap = true })
