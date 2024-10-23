@@ -5,6 +5,9 @@ set -Ux GPG_TTY $(tty)
 fzf --fish | source
 # Set up zoxide
 zoxide init fish | source
+# Set up StarShip
+set -Ux STARSHIP_CONFIG $HOME/.config/starship/starship.toml
+starship init fish | source
 # Set eza alias'------------------------------------------------------------------------
 # ld - lists only directories (no files)
 # lf - lists only files (no directories)
