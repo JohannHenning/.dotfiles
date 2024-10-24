@@ -34,13 +34,19 @@ end
 -- the config is for them to export an `apply_to_config`
 -- function that accepts the config object, like this:
 function module.apply_to_config(config)
-    private_helper()
-    config.hide_tab_bar_if_only_one_tab = true
-    config.font = wezterm.font 'JetBrains Mono'
-    config.color_scheme = 'Tokyo Night Storm'
-    config.window_background_opacity = 0.8
-    config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-    config.default_domain = 'WSL:Arch'
+  private_helper()
+  config.hide_tab_bar_if_only_one_tab = true
+  config.font = wezterm.font 'JetBrains Mono'
+  config.color_scheme = 'Catppuccin Mocha'
+  config.window_background_opacity = 0.90
+  config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+  config.default_domain = 'WSL:Arch'
+  config.window_padding = {
+    right = 0,
+    left = 0,
+    top = 2,
+    bottom = 2,
+  }
 end
 
 -- return our module table
@@ -184,8 +190,13 @@ Cool now that you're starting to get you legs back fzf next (sessionx not workin
 - ripgrep [rg]:(<https://github.com/BurntSushi/ripgrep>)
   - Jip, `yay -Sy ripgrep`
   - PS now Live Grep will start working in Nvim ("<leader> / ")
-Here is another fun one, at the time of writing this markdown file, I was in the process of creating this whole repo and though it relevant to be able to chill on my couch and code this from my Arch Installed laptop.
+    Here is another fun one, at the time of writing this markdown file, I was in the process of creating this whole repo and though it relevant to be able to chill on my couch and code this from my Arch Installed laptop.
 
 So `openssh` next:
-  - `yay -Sy openssh`
-  - `sudo systemctl enable --now sshd`
+
+- `yay -Sy openssh`
+- `sudo systemctl enable --now sshd`
+
+So I got bored of the normal promp and i kept finding myself using `pwd` way to much.
+
+- `yay -Sy starship`
