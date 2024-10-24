@@ -17,3 +17,6 @@ vim.keymap.set("n", "<leader>gG", "<cmd>LazyGitFilterCurrentFile<cr>", { desc = 
 -- Config quarto
 local quarto = require("quarto")
 vim.keymap.set("n", "<leader>qp", quarto.quartoPreview, { silent = true, noremap = true })
+
+-- Config for lazy COMMAND mode
+vim.keymap.set('n', ';', ':', { desc = "Lazy CMD mode" })
