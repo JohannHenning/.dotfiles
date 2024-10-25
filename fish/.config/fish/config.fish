@@ -1,13 +1,37 @@
 
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 set -Ux GPG_TTY $(tty)
+set -Ux fish_vi_force_cursor 1
+
 # Set up fzf key bindings
 fzf --fish | source
+
 # Set up zoxide
 zoxide init fish | source
+
 # Set up StarShip
 set -Ux STARSHIP_CONFIG $HOME/.config/starship/starship.toml
 starship init fish | source
+
+# Setup interactive cursor
+# Only run this in interactive shells
+if status is-interactive
+
+    # I'm trying to grow a neckbeard
+    # fish_vi_key_bindings
+    # Set the cursor shapes for the different vi modes.
+    set fish_cursor_default block
+    set fish_cursor_insert line
+    set fish_cursor_replace_one underscore
+    set fish_cursor_visual block
+
+    function fish_user_key_bindings
+        # Execute this once per mode that emacs bindings should be used in
+        fish_default_key_bindings -M insert
+        fish_vi_key_bindings --no-erase insert
+    end
+end
+
 # Set eza alias'------------------------------------------------------------------------
 # ld - lists only directories (no files)
 # lf - lists only files (no directories)

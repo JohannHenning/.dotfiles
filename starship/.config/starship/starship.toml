@@ -62,7 +62,8 @@ right_format = """$status$all"""
 
   [cmd_duration]
     format = '[$duration]($style) '
-
+  [battery]
+    disabled = true
 # Pure Symbols
   [aws]
     symbol = "  "
