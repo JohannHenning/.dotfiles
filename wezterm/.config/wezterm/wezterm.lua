@@ -6,7 +6,7 @@ config.enable_wayland = false
 config.enable_tab_bar = false
 config.window_background_opacity = 0.8
 config.font = wezterm.font("JetBrains Mono")
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Catppuccin Mocha"
 
 return config,
 	{
