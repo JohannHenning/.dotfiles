@@ -61,3 +61,7 @@ alias f='yazi'
 # Set basic alias'
 alias v='nvim'
 alias lg='lazygit'
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
