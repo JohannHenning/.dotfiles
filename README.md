@@ -6,6 +6,14 @@
 
 - [Gravatar](https://gravatar.com/theavengerza) ![alt text][Gravatar link]
 
+- WSL utilities [wslu](https://wslutiliti.es/wslu/install.html)
+
+- [Port Forwarding WSL instance](https://dev.to/vishnumohanrk/wsl-port-forwarding-2e22)
+
+> Also if you never ran any other WSL instances but this arch install you'll need to enable WSL to be able to use bash in powershell scripts.
+> Not exactly sure if this is needed but it does help eliminate unknown issues
+> `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+
 ---
 
 ## WSL Setup
@@ -24,7 +32,7 @@ Windows config files
 Create file `$USER\.config\wezterm\helpers.lua.lua` containing
 
 <details>
-<summary>here</summary>
+  <summary>here</summary>
 
 ```lua
 -- I am helpers.lua and I should live in ~/.config/wezterm/helpers.lua
@@ -63,7 +71,6 @@ function module.apply_to_config(config)
 end
 
 -- return our module table
-return module
 ```
 
 </details>
@@ -71,7 +78,7 @@ return module
 and another `$USER\.config\wezterm\weztem.lua` containing
 
 <details>
-<summary>here</summary>
+  <summary>here</summary>
 
 ```lua
 -- Pull in the wezterm API
@@ -88,7 +95,15 @@ return config
 
 I usually go for Method 3 as installing via CLI is my preference
 
-### Your in Arch
+###### [Port Forwarding](https://dev.to/vishnumohanrk/wsl-port-forwarding-2e22)
+
+Just follow the guide linked, depending on your flexablility on the machine your installing one (Work or Home),
+you can automate the shell script if needed by creating a shortcut to the script file and putting it in the
+`shell:startup` folder.
+
+> You can get there quick by pressing START + R and entering `shell:startup` into the run prompt.
+
+## Your in Arch
 
 From this point is basically a fresh Arc install and this is what I usually do:
 
