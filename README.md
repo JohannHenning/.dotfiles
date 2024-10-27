@@ -97,6 +97,8 @@ I usually go for Method 3 as installing via CLI is my preference
 
 ###### [Port Forwarding](https://dev.to/vishnumohanrk/wsl-port-forwarding-2e22)
 
+> The standard Arch install won't include the net-tools package be sure to install that as well. `yay -Sy net-tools`
+
 Just follow the guide linked, depending on your flexablility on the machine your installing one (Work or Home),
 you can automate the shell script if needed by creating a shortcut to the script file and putting it in the
 `shell:startup` folder.
