@@ -249,3 +249,12 @@ Ja, `yay -Sy zoxide`
 So I got bored of the normal promp and i kept finding myself using `pwd` way to much.
 
 - `yay -Sy starship`
+
+## Key remaps
+
+You'll notice a config file for [kanata](),
+Its a useful tool for remapping home row keys to commonly used modifier keys.
+Got these [dotfiles](https://github.com/dreamsofcode-io/home-row-mods/blob/main/kanata/linux/kanata.kbd)
+from a [Youtuber](https://www.youtube.com/watch?v=sLWQ4Gx88h4) I've followed for a while.
+
+> PS He has a lot of guides on good concepts for being more efficient with a keyboard.
