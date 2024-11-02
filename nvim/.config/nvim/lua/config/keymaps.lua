@@ -19,4 +19,8 @@ local quarto = require("quarto")
 vim.keymap.set("n", "<leader>qp", quarto.quartoPreview, { silent = true, noremap = true })
 
 -- Config for lazy COMMAND mode
-vim.keymap.set('n', ';', ':', { desc = "Lazy CMD mode" })
+vim.keymap.set("n", ";", ":", { desc = "Lazy CMD mode" })
+
+-- Config for Obsidian
+vim.keymap.set("n", "<leader>od", "<cmd>ObsidianDailies<cr>", { desc = "Obsidian Dalies" })
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNewFromTemplate<cr>", { desc = "Obsidian New From Template" })

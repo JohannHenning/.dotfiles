@@ -6,6 +6,7 @@ config.enable_wayland = false
 config.enable_tab_bar = false
 config.window_background_opacity = 1.0
 config.font = wezterm.font("JetBrains Mono")
+config.unicode_version = 14
 config.color_scheme = "Catppuccin Mocha"
 config.window_padding = {
 	left = 0,
