@@ -250,6 +250,24 @@ So I got bored of the normal promp and i kept finding myself using `pwd` way to 
 
 - `yay -Sy starship`
 
+###### nushell
+
+Tried a even newer shell, [nushell](https://www.nushell.sh/) should do the trick nicely as it
+integrates quite well with my current setup. Support for zoxide, starship
+and more.
+
+- `yay -Sy nushell`
+
+> Remember to `stow` the configs
+
+###### carapace
+
+[carapace](https://github.com/carapace-sh/carapace-bin) is a awesome completion tool
+for almost all shells.
+Gives you a full list of available flags for your new to learn bin files.
+
+- `yay -Sy carapace`
+
 ## Key remaps
 
 You'll notice a config file for [kanata](),

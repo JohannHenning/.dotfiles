@@ -1,0 +1,37 @@
+exit
+clear
+exit
+ls
+clear
+ls
+ls -a
+l
+clear
+la
+ls
+clear
+exit
+clear
+ls
+z dotifles
+c
+clear
+ls
+ls -a
+ls
+lt
+c
+v
+lazygit
+clear
+yay -h
+yay -ls
+yay -ls | like "github"
+yay -ls | grep github
+v
+clear
+ls
+v
+lt
+c
+v

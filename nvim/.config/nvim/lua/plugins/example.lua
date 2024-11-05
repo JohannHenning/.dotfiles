@@ -30,7 +30,7 @@ return {
   -- disable trouble
   {
     "folke/trouble.nvim",
-    enabled = false
+    enabled = false,
   },
 
   -- override nvim-cmp and add cmp-emoji
@@ -86,8 +86,8 @@ return {
       "jose-elias-alvarez/typescript.nvim",
       init = function()
         require("lazyvim.util").lsp.on_attach(function(_, buffer)
-          -- stylpucriptOrganizeImports: ignore
-          vim.keymtrueacriptOrganizeImports.set("n", "<leader>co", "TypescriptOrganizeImports",
+          -- stylua: ignore
+          vim.keymap.set("n", "<leader>co", "TypescriptOrganizeImports",
             { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
@@ -179,7 +179,7 @@ return {
   -- use mini.starter instead of alpha
   {
     import = "lazyvim.plugins.extras.ui.mini-starter",
-    enabled = false
+    enabled = false,
   },
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
@@ -213,5 +213,5 @@ return {
     --     desc = "GitUi (Root Dir)",
     --   },
     --   }
-  }
+  },
 }
