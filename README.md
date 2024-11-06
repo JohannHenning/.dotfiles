@@ -193,10 +193,23 @@ git-credential-manager configure
 
 > PS: This does take a while just be patient, especially the dot.net install
 
-2. If the above method isn't working (dotnet can be a bit silly at times) then try [this](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) - and use old fathfull `yay -Sy github-cli`
+> PS the following talkes longer to setup but is the longest lasting solution for signing your git commits.
+
+2. If the above method isn't working (dotnet can be a bit silly at times) then try
+   [this](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) - and use old fathfull `yay -Sy github-cli`
    and then run `gh auth login`
    This actually turned into another rabbit hole I'm gonna explain below:
-   > PS this is probably the easiest way to ensure your git config gets updated correctly
+
+- [Setup a SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+  first, and continue to the next step once you hit the ssh-agent step.
+- Ensure you setup [fish_ssh_agen](https://github.com/ivakyb/fish_ssh_agent),
+
+  > Shouldn't be an issue if you pulled the config files from the repo, PS keep in mind this however only
+  > solves the problem of the `ssh-agent` in fish.
+
+- Using the [cli](https://cli.github.com/manual/gh_auth_setup-git) you can quikly ensure the repo
+  your working on is setup to use the created ssh key by running
+  `gh auth setup-git`
 
 3 .[This](https://gitlab.com/hasecilu/dotfiles/-/snippets/2542670) guide shows how to create a GPG key and link it to your GitHub account. Keeps you from having to authorize the machine over and over again
 
