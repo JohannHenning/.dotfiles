@@ -68,3 +68,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # ssh agent
 fish_ssh_agent
+
+## Quartz 4 shortcut
+alias qp='npx quartz build --directory ../ --serve'

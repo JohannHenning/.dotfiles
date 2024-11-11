@@ -161,7 +161,7 @@ return {
         note:add_alias(note.title)
       end
 
-      local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+      local out = { id = note.id, title = note.title, aliases = note.aliases, tags = note.tags }
 
       -- `note.metadata` contains any manually added fields in the frontmatter.
       -- So here we just make sure those fields are kept in the frontmatter.
@@ -184,6 +184,9 @@ return {
         weekno = function()
           return os.date("%V")
         end,
+        -- title = function(note)
+        --   return note.title
+        -- end,
       },
     },
 
