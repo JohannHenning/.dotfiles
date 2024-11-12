@@ -240,7 +240,11 @@ Cool now that you're starting to get you legs back fzf next (sessionx not workin
 
 ###### fzf [install](https://github.com/junegunn/fzf)
 
-Yip, `yay -Sy fzf`
+- Yip, `yay -Sy fzf`
+- You wanna have a look at [this](https://github.com/PatrickF1/fzf.fish/tree/main?tab=readme-ov-file).
+  Basically a fzf finder on steroids built for fish.
+  Just run `omf install https://github.com/PatrickF1/fzf.fish` and ensure your
+  `fish` and `fd` config's are _stowed_.
 
 ###### zoxide [intall](https://github.com/ajeetdsouza/zoxide)
 
