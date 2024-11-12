@@ -1,10 +1,17 @@
 
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 set -Ux GPG_TTY $(tty)
+set -Ux EDITOR nvim
 set -Ux fish_vi_force_cursor 1
 
-# Set up fzf key bindings
-fzf --fish | source
+# Set up fzf key bindings and options
+
+# NOTE: Pre-Plugin
+# fzf --fish | source 
+
+# NOTE: After fzf.fish install
+set fzf_fd_opts --hidden --max-depth 5
+fzf_configure_bindings --directory=\cf --git_log=\cg --git_status=\ch --history=\cr --processes=\ct --variables=\cv
 
 # Set up zoxide
 zoxide init fish | source
@@ -70,4 +77,4 @@ set --export PATH $BUN_INSTALL/bin $PATH
 fish_ssh_agent
 
 ## Quartz 4 shortcut
-alias qp='npx quartz build --directory ../ --serve'
+alias op='npx quartz --serve -d ../'
