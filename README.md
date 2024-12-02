@@ -245,6 +245,7 @@ Cool now that you're starting to get you legs back fzf next (sessionx not workin
   Basically a fzf finder on steroids built for fish.
   Just run `omf install https://github.com/PatrickF1/fzf.fish` and ensure your
   `fish` and `fd` config's are _stowed_.
+  > PS this is now part of the normal config
 
 ###### zoxide [intall](https://github.com/ajeetdsouza/zoxide)
 
