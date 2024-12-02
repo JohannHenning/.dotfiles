@@ -1,30 +1,23 @@
-
+#NOTE: Set basic variables ----------------------------------------------------
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 set -Ux GPG_TTY $(tty)
 set -Ux EDITOR nvim
 set -Ux fish_vi_force_cursor 1
-
-# Set up fzf key bindings and options
-
-# NOTE: Pre-Plugin
-# fzf --fish | source 
-
-# NOTE: After fzf.fish install
+#NOTE: Set basic alias' -------------------------------------------------------
+alias v='nvim'
+alias lg='lazygit'
+#NOTE: FZF key bindings and options ------------------------------------
+# WARNING: After fzf.fish install (Refer to README.md for detials)
 set fzf_fd_opts --hidden --max-depth 5
 fzf_configure_bindings --directory=\cf --git_log=\cg --git_status=\ch --history=\cr --processes=\ct --variables=\cv
-
-# Set up zoxide
+#NOTE: Zoxide -----------------------------------------------------------------
 zoxide init fish | source
-
-# Set up StarShip
+#NOTE: StarShip ---------------------------------------------------------------
 set -Ux STARSHIP_CONFIG $HOME/.config/starship/starship.toml
 starship init fish | source
-
-# Setup interactive cursor
-# Only run this in interactive shells
+#NOTE: Interactive cursor -----------------------------------------------------
+# PERF: Only run this in interactive shells
 if status is-interactive
-
-    # I'm trying to grow a neckbeard
     # fish_vi_key_bindings
     # Set the cursor shapes for the different vi modes.
     set fish_cursor_default block
@@ -38,8 +31,7 @@ if status is-interactive
         fish_vi_key_bindings --no-erase insert
     end
 end
-
-# Set eza alias'------------------------------------------------------------------------
+#NOTE: Eza alias' -------------------------------------------------------------
 # ld - lists only directories (no files)
 # lf - lists only files (no directories)
 # lh - lists only hidden files (no directories)
@@ -53,8 +45,7 @@ alias ll='eza -al --icons=always --group-directories-first'
 alias ls='eza -alF --icons=always --color=always --sort=name\
           --group-directories-first --no-permissions --no-user --git --no-time'
 alias lt='eza -aT --level=2 --icons=always --sort=name'
-# -------------------------------------------------------------------------------------
-# Setup Yazi --------------------------------------------------------------------------
+#NOTE: Yazi alias -------------------------------------------------------------
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"
@@ -64,17 +55,17 @@ function y
     rm -f -- "$tmp"
 end
 alias f='yazi'
-#--------------------------------------------------------------------------------------
-# Set basic alias'
-alias v='nvim'
-alias lg='lazygit'
-
-# bun
+#NOTE: Bun variables ----------------------------------------------------------
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
-
-# ssh agent
+#NOTE: ssh agent ---------------------------------------------------------------
 fish_ssh_agent
-
-## Quartz 4 shortcut
-alias op='npx quartz --serve -d ../'
+#NOTE: Quartz Alias ------------------------------------------------------------
+# The following should be run within the .quartz subdirectory of your obsidian vault
+alias op='npx quartz build --serve -d ../'
+#NOTE: RClone Alias ------------------------------------------------------------
+#WARNING: The following 2 command are for syncing Obsidian Vaults
+# First one is for initial sync, or when changes are made to the .rcloneignore file
+# Second is for successive syncs
+alias rsr='rclone bisync ~/Vaults gdrive:Vaults --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only --resilient -MvP --drive-skip-gdocs --fix-case --resync --filters-file ~/Vaults/MyLife/.rcloneignore'
+alias rs='rclone bisync ~/Vaults gdrive:Vaults --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only --resilient -MvP --drive-skip-gdocs --fix-case --filters-file ~/Vaults/MyLife/.rcloneignore'
