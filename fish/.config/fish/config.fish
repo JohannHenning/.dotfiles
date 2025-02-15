@@ -69,3 +69,5 @@ alias op='npx quartz build --serve -d ../'
 # Second is for successive syncs
 alias rsr='rclone bisync ~/Vaults gdrive:Vaults --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only --resilient -MvP --drive-skip-gdocs --fix-case --resync --filters-file ~/Vaults/MyLife/.rcloneignore'
 alias rs='rclone bisync ~/Vaults gdrive:Vaults --create-empty-src-dirs --compare size,modtime,checksum --slow-hash-sync-only --resilient -MvP --drive-skip-gdocs --fix-case --filters-file ~/Vaults/MyLife/.rcloneignore'
+#NOTE: Docker ------------------------------------------------------------------
+alias dc='docker-compose'

@@ -294,3 +294,11 @@ Got these [dotfiles](https://github.com/dreamsofcode-io/home-row-mods/blob/main/
 from a [Youtuber](https://www.youtube.com/watch?v=sLWQ4Gx88h4) I've followed for a while.
 
 > PS He has a lot of guides on good concepts for being more efficient with a keyboard.
+
+## Networking (_Clean install_)
+
+You'll probably end up somewhere in the situation where you'll need to connect to a
+hostname.local address.
+Depending on which network service you are using you'll have to setup a mDNS service as well.
+
+[This](https://unix.stackexchange.com/questions/459991/how-to-configure-systemd-resolved-for-mdns-multicast-dns-on-local-network) link will provide some information on how to set this up in `iwd` and `systemd-resolvd`.

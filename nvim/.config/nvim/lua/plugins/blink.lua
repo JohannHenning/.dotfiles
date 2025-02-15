@@ -1,4 +1,4 @@
--- Purely to allow obsidian.nvim to work
+-- Added for obsidian.nvim
 return {
   "saghen/blink.cmp",
   dependencies = {

@@ -3,17 +3,32 @@ local config = {}
 local act = wezterm.action
 
 config.enable_wayland = false
+
+--NOTE: TAB Bar
 config.enable_tab_bar = false
-config.window_background_opacity = 1.0
-config.font = wezterm.font("JetBrains Mono")
-config.unicode_version = 14
-config.color_scheme = "Catppuccin Mocha"
+config.use_fancy_tab_bar = false
+
+--NOTE: Window config
+config.window_background_opacity = 0.95
 config.window_padding = {
 	left = 0,
 	right = 0,
 	top = 0,
 	bottom = 0,
 }
+--NOTE: Font config
+config.font = wezterm.font("JetBrains Mono")
+config.unicode_version = 14
+
+--NOTE: Theme config
+config.color_scheme = "Catppuccin Mocha"
+
+--NOTE: Keybinds config
+-- config.leader = {
+-- 	key = "a",
+-- 	mods = "CTRL",
+-- 	timeout_milliseconds = 1000,
+-- }
 
 return config,
 	{
