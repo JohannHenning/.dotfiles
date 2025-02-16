@@ -8,7 +8,9 @@ alias v='nvim'
 alias lg='lazygit'
 #NOTE: FZF key bindings and options ------------------------------------
 # WARNING: After fzf.fish install (Refer to README.md for detials)
+set fzf_directory_opts --bind "ctrl-o:execute($EDITOR {} &> /dev/tty)"
 set fzf_fd_opts --hidden --max-depth 5
+set fzf_preview_dir_cmd eza --all --color=always --icons=always
 fzf_configure_bindings --directory=\cf --git_log=\cg --git_status=\ch --history=\cr --processes=\ct --variables=\cv
 #NOTE: Zoxide -----------------------------------------------------------------
 zoxide init fish | source
