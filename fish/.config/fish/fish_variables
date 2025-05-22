@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export GPG_TTY:not\x20a\x20tty
+SETUVAR --export NVIM_APPNAME:nvim_quarto
 SETUVAR --export STARSHIP_CONFIG:/home/avenger/\x2econfig/starship/starship\x2etoml
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u00bb
 SETUVAR __fish_initialized:3400

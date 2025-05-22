@@ -4,7 +4,8 @@ set -Ux GPG_TTY $(tty)
 set -Ux EDITOR nvim
 set -Ux fish_vi_force_cursor 1
 #NOTE: Set basic alias' -------------------------------------------------------
-alias v='nvim'
+alias v='set -Ux NVIM_APPNAME nvim & nvim'
+alias vq='set -Ux NVIM_APPNAME nvim_quarto & nvim'
 alias lg='lazygit'
 #NOTE: FZF key bindings and options ------------------------------------
 # WARNING: After fzf.fish install (Refer to README.md for detials)
